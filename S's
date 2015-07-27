@@ -1,0 +1,26 @@
+using UnityEngine;
+using System.Collections;
+
+public class Ss : MonoBehaviour {
+
+	public void sayhello()
+
+	{
+
+	}
+
+
+	// Use this for initialization
+	void Start () {
+
+		string myString = "\"Possesses\" possesses a great number of s's";
+	
+		print ("\"Possesses\" possesses a great number of s's.");
+		int numberOfLetters = myString.Length;
+	}
+	
+	// Update is called once per frame
+	void Update () {
+	
+	}
+}
