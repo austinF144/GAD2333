@@ -8,17 +8,19 @@ public class position : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
-		GameObject mySphere01 = GameObject.Find ("Capsule01");
-		Transform mySphere01Transform = mySphere01.transform;
-		public Vector3 position = mySphere01Transform.position;
 
-		print ("My Capsule01 is at " + position);
-		print ("The x-coordinat is at " + position.x);
+
+
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
-	
+		GameObject mySphere01 = GameObject.Find ("Capsule01");
+		Transform mySphere01Transform = mySphere01.transform;
+		Vector3 position = mySphere01Transform.position;
+
+		print ("My Capsule01 is at " + position);
+		print ("The x-coordinat is at " + position.x);
 	}
 }
