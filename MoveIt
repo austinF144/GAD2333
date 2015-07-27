@@ -1,0 +1,51 @@
+using UnityEngine;
+using System.Collections;
+
+public class MoveIt : MonoBehaviour {
+
+
+	public float speed = 10f;
+
+	// Use this for initialization
+	void Start () 
+	{
+
+
+	}
+	
+	// Update is called once per frame
+	void Update () 
+	
+	 {
+
+		if (Input.GetKey (KeyCode.RightArrow)) {
+			Vector3 pos = transform.position;
+			pos.x += speed * Time.deltaTime;
+			transform.position = pos;
+		} else if (Input.GetKey (KeyCode.LeftArrow)) {
+			Vector3 pos = transform.position;
+			pos.x -= speed * Time.deltaTime;
+			transform.position = pos;
+		}
+			
+		if  (Input.GetKey (KeyCode.UpArrow)) {
+			Vector3 pos = transform.position;
+			pos.y += speed * Time.deltaTime;
+			transform.position = pos;
+		} else if (Input.GetKey (KeyCode.DownArrow)) {
+			Vector3 pos = transform.position;
+			pos.y -= speed * Time.deltaTime;
+			transform.position = pos;
+		}
+
+			if ((Input.GetKey (KeyCode.LeftAlt)) && (Input.GetKey (KeyCode.UpArrow))) {
+				Vector3 pos = transform.position;
+				pos.z += speed * Time.deltaTime;
+				transform.position = pos;
+		} else if ((Input.GetKey (KeyCode.LeftAlt)) && (Input.GetKey (KeyCode.DownArrow))) {
+				Vector3 pos = transform.position;
+				pos.z -= speed * Time.deltaTime;
+				transform.position = pos;
+		}
+	}
+}
